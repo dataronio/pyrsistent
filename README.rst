@@ -592,6 +592,13 @@ The C extension will be used automatically when possible.
 The pure python implementation is fully PyPy compatible. Running it under PyPy speeds operations up considerably if 
 the structures are used heavily (if JITed), for some cases the performance is almost on par with the built in counterparts.
 
+Type hints
+----------
+
+PEP 561 style type hints for use with mypy and various editors are available for most types and functions in pyrsistent.
+
+Type classes for annotating your own code with pyrsistent types are also available under pyrsistent.typing.
+
 Installation
 ------------
 
@@ -645,6 +652,16 @@ Kamil Galuszka https://github.com/galuszkak
 
 Tsuyoshi Hombashi https://github.com/thombashi
 
+nattofriends https://github.com/nattofriends
+
+agberk https://github.com/agberk
+
+Waleed Khan https://github.com/arxanas
+
+Jean-Louis Fuchs https://github.com/ganwell
+
+Carlos Corbacho https://github.com/ccorbacho
+
 Contributing
 ------------
 
@@ -660,6 +677,15 @@ Tests can be executed using tox_.
 Install tox: ``pip install tox``
 
 Run test for Python 2.7: ``tox -epy27``
+
+Release
+~~~~~~~
+* Update CHANGES.txt
+* Update README with any new contributors and potential info needed.
+* Update _pyrsistent_version.py
+* python setup.py sdist upload
+* Commit and tag with new version: git add -u . && git commit -m 'Prepare version vX.Y.Z' && git tag -a vX.Y.Z -m 'vX.Y.Z'
+* Push commit and tags: git push && git push --tags
 
 Project status
 --------------
